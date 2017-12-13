@@ -1,7 +1,9 @@
 import test from 'ava'
-import { doSomething } from './index'
+import Client from './'
 
 
-test('doSomething', t => {
-  t.is(doSomething(5), 25)
+test('basics', t => {
+  const client = new Client('http://fakeendpoint.com')
+
+  t.true(!!client)
 })

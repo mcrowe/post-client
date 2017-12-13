@@ -1,1 +1,5 @@
-export declare function doSomething(a: number): number;
+export default class Client {
+    private endpoint;
+    constructor(endpoint: string);
+    send(action: string, params: object): Promise<any>;
+}
